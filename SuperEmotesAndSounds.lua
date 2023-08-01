@@ -267,13 +267,13 @@ end
 
 --#############Play random sound file from Dir####################--
 function SESPlaySoundFile(libTable) 
-	if libTable == nill then print("There was an error with SES, aborting play.") return end
+	if libTable == nil then print("There was an error with SES, aborting play.") return end
 	PlaySoundFile(libTable[random(1,#libTable)])
 end
 --#############Play sound file from Dir####################--
 function SESPlayEmoteSound(LibraryTable,InnerTable) 
-	if LibraryTable == nill then print("There was an error with SES, aborting play.") return end
-	if InnerTable == nill then print("There was an error with SES, aborting play.") return end
+	if LibraryTable == nil then print("There was an error with SES, aborting play.") return end
+	if InnerTable == nil then print("There was an error with SES, aborting play.") return end
 	-- can make libraryTable a variable so we can have mroe libraries than SESEmotesLIB
 	PlaySoundFile(SESEmotesLIB[tonumber(InnerTable)][2])
 end
