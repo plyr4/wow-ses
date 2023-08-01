@@ -1,0 +1,62 @@
+tag b40a83605d545010abfc962912aaf577b074d4c9 9.1.5
+Author:	josephggarner <josephggarner@gmail.com>
+Date:	Sun Feb 20 09:42:33 2022 -0500
+
+commit 03f92adbc6f3bf5be4204e0a5ed2f535420e6d4e
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Sun Feb 20 09:38:44 2022 -0500
+
+    Version update
+
+commit 0570f0e5fb091e57e464ca7cf1bd392f852bdc1d
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Sun Feb 20 09:26:12 2022 -0500
+
+    Modified SPIT response
+
+commit 0570f0e5fb091e57e464ca7cf1bd392f852bdc1d
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Sun Feb 20 09:26:12 2022 -0500
+
+    Modified SPIT response
+
+commit 9973a6b55551e81ef0bcb9859a44203d93425c04
+Author: chrishull91 <31784074+chrishull91@users.noreply.github.com>
+Date:   Thu Jan 13 13:45:23 2022 -0500
+
+    Update ReactiveEmotes.lua
+    
+    Update emote responses up to the letter D
+
+commit 633d520297a7e7f4a979b5f5332f6baa8c5637f8
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Thu Jan 13 11:31:51 2022 -0500
+
+    /ses list frame is now locked into the screen
+
+commit 633d520297a7e7f4a979b5f5332f6baa8c5637f8
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Thu Jan 13 11:31:51 2022 -0500
+
+    /ses list frame is now locked into the screen
+
+commit 9ad71adeb4c89ad982d3fc13f43f92f9be17c5a7
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Thu Jan 13 11:30:06 2022 -0500
+
+    Removed spaces from server name to resolve duplicate sound clip playing
+
+commit 64044c668c8bef4d0f61cc129d779f3b923e7503
+Author: chrishull91 <31784074+chrishull91@users.noreply.github.com>
+Date:   Sun Jan 9 17:25:58 2022 -0500
+
+    Clean up
+    
+    Cleaned up the code base and removed some low quality emotes sounds.
+
+commit 64f02baaeb92820aa9914a93815c919f0a05be7b
+Author: josephggarner <josephggarner@gmail.com>
+Date:   Sat Jan 8 22:29:22 2022 -0500
+
+    Updated frame shown for list command
+

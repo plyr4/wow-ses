@@ -1,0 +1,144 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/   ..\FrameXML\UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="XML_bootstrap.lua" />
+	<Button name="MyModEntryTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="194" y="16" />
+		</Size>
+		<NormalFont style="GameFontHighlightLeft" />
+	</Button>
+	<Frame name="SuperEmotesFrame" inherits="BackdropTemplate" movable="true" enableMouse="true" enableMouseMotion="true" clampedToScreen="true">
+		<Size x="284" y="365" />
+		<Anchors>
+			<Anchor point="TOPLEFT" x="468" y="-48" />
+		</Anchors>
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_DIALOG_32_32" keyType="string" type="global" />
+		</KeyValues>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize val="32" />
+			<EdgeSize val="32" />
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="FrameTitle" inherits="GameFontNormal" text="Super Emotes And Sounds">
+					<Size x="184" y="20" />
+					<Anchors>
+						<Anchor point="TOPLEFT" x="18" y="-20" />
+					</Anchors>
+				</FontString>
+				<FontString name="Instructions1" inherits="GameFontNormal" text="Sound Emotes play to your party or raid. Players with the addon will hear the emote.">
+					<Size x="246" y="37" />
+					<Anchors>
+						<Anchor point="TOPLEFT" x="18" y="-43" />
+					</Anchors>
+				</FontString>
+				<FontString name="Instructions2" inherits="GameFontNormal" text="Or, play emotes in your chatbox with              /ses 'emote'">
+					<Size x="246" y="31" />
+					<Anchors>
+						<Anchor point="TOPLEFT" x="18" y="-86" />
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<ScrollFrame name="MyModScrollBar" inherits="FauxScrollFrameTemplate">
+				<Size x="228" y="221" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-123" />
+				</Anchors>
+				<Scripts>
+					<OnVerticalScroll>
+						FauxScrollFrame_OnVerticalScroll(self, offset-3, 16, MyModScrollBar_Update);
+					</OnVerticalScroll>
+				</Scripts>
+			</ScrollFrame>
+			<Button name="MyModEntry1" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-123" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry2" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-145" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry3" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-167" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry4" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-189" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry5" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-211" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry6" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-233" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry7" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-255" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry8" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-277" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry9" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-299" />
+				</Anchors>
+			</Button>
+			<Button name="MyModEntry10" inherits="MyModEntryTemplate">
+				<Size x="228" y="23" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="18" y="-321" />
+				</Anchors>
+			</Button>
+			<Button name="CloseButton" inherits="UIPanelButtonTemplate" text="Close">
+				<Size x="61" y="20" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="203" y="-20" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						self:GetParent():Hide();
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				XML_PopulateList();
+				tinsert(UISpecialFrames, self:GetName());
+				self:RegisterForDrag("LeftButton");
+			</OnLoad>
+			<OnDragStart>
+				self:StartMoving();
+			</OnDragStart>
+			<OnDragStop>
+				self:StopMovingOrSizing();
+			</OnDragStop>
+		</Scripts>
+	</Frame>
+</Ui>
